@@ -4,6 +4,9 @@
   "description": "Source code for the alxolr.com blog tutorial",
   "main": "index.js",
   "scripts": {
+    "watch": "tsc --watch",
+    "build": "tsc",
+    "lint": "tslint --project . --fix",
     "test": "mocha ./dist --recursive"
   },
   "repository": {
@@ -21,7 +24,16 @@
   },
   "homepage": "https://github.com/alxolr/mocha-tutorial#readme",
   "devDependencies": {
+    "@types/mocha": "^5.2.5",
+    "@types/node": "^10.12.9",
+    "husky": "^1.1.4",
     "tslint": "^5.11.0",
     "typescript": "^3.1.6"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run lint && git add .",
+      "pre-push": "npm run build && npm run test"
+    }
   }
 }
