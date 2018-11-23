@@ -7,7 +7,7 @@
     "watch": "tsc --watch",
     "build": "tsc",
     "lint": "tslint --project . --fix",
-    "test": "mocha ./dist --recursive"
+    "test": "mocha ./dist/test --recursive"
   },
   "repository": {
     "type": "git",

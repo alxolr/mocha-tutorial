@@ -14,7 +14,8 @@
       true,
       "single"
     ],
-    "no-console": false
+    "no-console": false,
+    "only-arrow-functions": false
   },
   "rulesDirectory": []
 }
